@@ -22,8 +22,8 @@ jobs:
 
       - name: Deploy to S3
         run: |
-          aws s3 sync ./ s3://your-s3-bucket-name/ --delete --exclude ".git/*"
+          aws s3 sync ./ s3://githubworkflow4/ --delete --exclude ".git/*"
 
       - name: Set S3 bucket policy for public access
         run: |
-          aws s3 website s3://your-s3-bucket-name/ --index-document index.html --error-document error.html
+          aws s3 website s3://githubworkflow4/ --index-document index.html --error-document error.html
